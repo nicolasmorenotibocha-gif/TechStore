@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda de Tecnología</title>
+    <!-- FUENTE GOOGLE FONTS PARA UN ASPECTO MODERNO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ENLACE AL CSS (Asegúrate de que el archivo se llame estilos.css) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="logo">TechStore</h1>
+            <nav class="main-nav">
+                <a href="#productos">Productos</a>
+                <a href="#multimedia">Multimedia</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- SECCIÓN PRODUCTOS -->
+        <section id="productos" class="section-card">
+            <h2 class="section-title">Productos Tecnológicos</h2>
+
+            <div class="grid-productos">
+                <article class="product-card">
+                    <div class="image-wrapper">
+                        <img src="imagenes/iphone.jpg" alt="iPhone 14 Pro">
+                    </div>
+                    <h3>iPhone 14 Pro</h3>
+                    <p class="description">Teléfono inteligente con cámara avanzada y gran rendimiento.</p>
+                    <p class="price">$2.500.000</p>
+                    <a href="https://www.apple.com/co/iphone/" target="_blank" class="btn btn-secondary">Ver producto</a>
+                </article>
+
+                <article class="product-card">
+                    <div class="image-wrapper">
+                        <img src="imagenes/portatil.jpg" alt="Computador portátil">
+                    </div>
+                    <h3>Computador Portátil</h3>
+                    <p class="description">Computador ideal para estudiar, trabajar y realizar tareas.</p>
+                    <p class="price">$3.200.000</p>
+                    <button class="btn btn-primary">Comprar</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="image-wrapper">
+                        <img src="imagenes/audifonos.jpg" alt="Audífonos inalámbricos">
+                    </div>
+                    <h3>Audífonos Inalámbricos</h3>
+                    <p class="description">Audífonos con conexión Bluetooth y sonido de alta calidad.</p>
+                    <p class="price">$350.000</p>
+                    <button class="btn btn-primary">Comprar</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MULTIMEDIA -->
+        <section id="multimedia" class="section-card">
+            <h2 class="section-title">Contenido Multimedia</h2>
+
+            <div class="multimedia-grid">
+                <div class="media-box">
+                    <img src="imagenes/tecnologia.jpg" alt="Productos tecnológicos">
+                </div>
+                <div class="media-box">
+                    <video controls>
+                        <source src="videos/tecnologia.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-card">
+            <h2 class="section-title">Formulario de Contacto</h2>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="••••••••">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="producto">Producto de interés</label>
+                    <select id="producto" name="producto">
+                        <option value="iphone">iPhone 14 Pro</option>
+                        <option value="portatil">Computador portátil</option>
+                        <option value="audifonos">Audífonos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-subtitle">Forma de contacto preferida:</span>
+                    <div class="options-group">
+                        <label class="radio-check-label">
+                            <input type="radio" id="correoContacto" name="contacto" value="correo"> Correo
+                        </label>
+                        <label class="radio-check-label">
+                            <input type="radio" id="telefonoContacto" name="contacto" value="telefono"> Teléfono
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-subtitle">Categorías de interés:</span>
+                    <div class="options-group">
+                        <label class="radio-check-label">
+                            <input type="checkbox" id="celular" name="interes" value="celular"> Celulares
+                        </label>
+                        <label class="radio-check-label">
+                            <input type="checkbox" id="computadores" name="interes" value="computadores"> Computadores
+                        </label>
+                        <label class="radio-check-label">
+                            <input type="checkbox" id="audifonos" name="interes" value="audifonos"> Audífonos
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Comentarios o dudas</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 <strong>TechStore</strong> - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
